@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Seatwork#2</title>
+    <style>
+       #content{
+            border-style: dashed;
+            margin: auto;
+            padding: 30px;
+            
+        }
+        #robot{
+            margin: auto;
+        }
+        body{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-4" id="content">
+            <h3>Hello! My name is CALCU and I'm here <br> to give you a math challenge!</h3>
+            <p>Enter value for x:</p>
+            <input type="number" id="num1">
+            <p>Enter value for y:</p>
+            <input type="number" id="num2"><br><br>
+            <!-- Buttons -->
+                <button onclick="mul()" type="button" class="btn btn-primary" id="calcmul">Product of x and y</button>
+                <button onclick="expo()" type="button" class="btn btn-primary" id="calcexp">x raised to y</button>
+                <button onclick="rem()" type="button" class="btn btn-primary" id="calcmod">remainder</button>
+                <button onclick="comp()" type="button" class="btn btn-primary" id="calcequ">is x equal to y</button> 
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+<script>
+    function mul() {
+       let num1 = document.getElementById("num1").value;
+       let num2 = document.getElementById("num2").value;
+       let prod = parseInt(num1)*parseInt(num2);
+        window.alert("The product of x and y is: " + prod).innerHTML
+    }
+    function expo() {
+       let num1 = document.getElementById("num1").value;
+       let num2 = document.getElementById("num2").value;
+       let pow = parseInt(num1)**parseInt(num2);
+        window.alert("x raised to y is: " + pow).innerHTML
+    }
+    function rem() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let rem = parseInt(num1)%parseInt(num2);
+         window.alert("the remainder of x and y is:" + rem).innerHTML;
+    }
+    function comp() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let equ = parseInt(num1) == parseInt(num2);
+         window.alert("is x equal to y?: " + equ).innerHTML;
+    }
+</script>
+</div>
+</body>
+</html>
